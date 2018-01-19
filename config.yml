@@ -1,0 +1,27 @@
+## YAML Configuration file
+logging:
+  level: INFO
+  loggers:
+    com.rodney: DEBUG
+    
+    # password strings
+    # Not used at this time
+
+server:
+    applicationConnectors:
+        # Unsecured Connections
+        - type: http
+          port: 8080
+          
+          # Secured Connections
+        - type: https
+          port: 8443
+          keyStorePath: hello.keystore
+          keyStorePassword: p@ssw0rd
+          validateCerts: false
+          
+database:
+    driverClass: com.mysql.jdbc.Driver
+    user: javasa
+    password: N1$$@n!2018
+    url: jdbc:mysql://10.41.20.156:3306/javaTestDB
